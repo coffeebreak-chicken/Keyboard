@@ -1,0 +1,20 @@
+cd qmk_firmware
+(cd /home/student/qmk_firmware)
+sudo service docker start
+
+util/docker_build.sh goforty_ortho:vial
+util/docker_build.sh goforty_ortho:default
+util/docker_build.sh goforty_ortho:via
+
+
+
+sudo service docker stop
+
+
+
+
+
+sudo service docker start
+cd qmk_firmware
+util/docker_build.sh goforty_ortho:via
+sudo service docker stop
